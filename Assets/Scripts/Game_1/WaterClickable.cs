@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class WaterClickable : MonoBehaviour
 {
-    private GameManager gameManager;
+    [SerializeField] private Animator animator;
 
+    private GameManager gameManager;
     private bool isBroken;
 
     public bool IsBroken => isBroken;
@@ -16,11 +17,15 @@ public class WaterClickable : MonoBehaviour
     public void Break()
     {
         isBroken = true;
+
+        animator.SetBool("IsBroken", true);
     }
 
     public void Repair()
     {
         isBroken = false;
+
+        animator.SetBool("IsBroken", false);
     }
 
     private void OnMouseDown()
