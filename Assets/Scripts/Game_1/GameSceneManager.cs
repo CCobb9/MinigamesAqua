@@ -5,7 +5,7 @@ public class GameSceneManager : MonoBehaviour
 {
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void LoadLevel1()
