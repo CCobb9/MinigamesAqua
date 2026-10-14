@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 44c1b013cfd326c4d8ab426b302505f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9183264835448705718
+    second: "ni\xF1o_ducha_0"
+  - first:
+      213: -73998879396370208
+    second: "ni\xF1o_ducha_1"
+  - first:
+      213: -2238129984993581302
+    second: "ni\xF1o_ducha_2"
+  - first:
+      213: -5201356037971636996
+    second: "ni\xF1o_ducha_3"
+  - first:
+      213: 8011876838735803934
+    second: "ni\xF1o_ducha_4"
+  - first:
+      213: 3314521247946362834
+    second: "ni\xF1o_ducha_5"
+  - first:
+      213: 5999214725752748086
+    second: "ni\xF1o_ducha_6"
+  - first:
+      213: -7330449082183940199
+    second: "ni\xF1o_ducha_7"
+  - first:
+      213: -3943555156996713871
+    second: "ni\xF1o_ducha_8"
+  - first:
+      213: 7448022874136573908
+    second: "ni\xF1o_ducha_9"
+  - first:
+      213: -6344398492361483324
+    second: "ni\xF1o_ducha_10"
+  - first:
+      213: 5842732614095210571
+    second: "ni\xF1o_ducha_11"
+  - first:
+      213: -8888257375831377174
+    second: "ni\xF1o_ducha_12"
+  - first:
+      213: -3645023189297719713
+    second: "ni\xF1o_ducha_13"
+  - first:
+      213: -1406740782608384809
+    second: "ni\xF1o_ducha_14"
+  - first:
+      213: -4588295751227544853
+    second: "ni\xF1o_ducha_15"
+  - first:
+      213: 7186179228076331213
+    second: "ni\xF1o_ducha_16"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_0"
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 256
+        width: 411
+        height: 1303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2914b76b2817f70800000000000000
+      internalID: 9183264835448705718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_1"
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1510
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e86dc7496a19fef0800000000000000
+      internalID: -73998879396370208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_2"
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1441
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07ae4303a090f0e0800000000000000
+      internalID: -2238129984993581302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_3"
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 1462
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc0e5ecd3211d7b0800000000000000
+      internalID: -5201356037971636996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_4"
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1418
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16f60d3987ef2f60800000000000000
+      internalID: 8011876838735803934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_5"
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1415
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dfc350938b8ffd20800000000000000
+      internalID: 3314521247946362834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_6"
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1332
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638f8c3020e714350800000000000000
+      internalID: 5999214725752748086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_7"
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1347
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997865ce563054a90800000000000000
+      internalID: -7330449082183940199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_8"
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1349
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1721d038a7da549c0800000000000000
+      internalID: -3943555156996713871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_9"
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1353
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7f4ebb751bc5760800000000000000
+      internalID: 7448022874136573908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_10"
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1356
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb154d6f2b24f7a0800000000000000
+      internalID: -6344398492361483324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_11"
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1267
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b480cbc3b5e851150800000000000000
+      internalID: 5842732614095210571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_12"
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 1265
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea3359320196a480800000000000000
+      internalID: -8888257375831377174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_13"
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1291
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5619d3b8b64a6dc0800000000000000
+      internalID: -3645023189297719713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_14"
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 1287
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dc729126b04a7ce0800000000000000
+      internalID: -1406740782608384809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_15"
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1263
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beae5a7f2591350c0800000000000000
+      internalID: -4588295751227544853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ni\xF1o_ducha_16"
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 173
+        width: 1242
+        height: 1104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0d7c51fef6ab360800000000000000
+      internalID: 7186179228076331213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "ni\xF1o_ducha_0": 9183264835448705718
+      "ni\xF1o_ducha_1": -73998879396370208
+      "ni\xF1o_ducha_10": -6344398492361483324
+      "ni\xF1o_ducha_11": 5842732614095210571
+      "ni\xF1o_ducha_12": -8888257375831377174
+      "ni\xF1o_ducha_13": -3645023189297719713
+      "ni\xF1o_ducha_14": -1406740782608384809
+      "ni\xF1o_ducha_15": -4588295751227544853
+      "ni\xF1o_ducha_16": 7186179228076331213
+      "ni\xF1o_ducha_2": -2238129984993581302
+      "ni\xF1o_ducha_3": -5201356037971636996
+      "ni\xF1o_ducha_4": 8011876838735803934
+      "ni\xF1o_ducha_5": 3314521247946362834
+      "ni\xF1o_ducha_6": 5999214725752748086
+      "ni\xF1o_ducha_7": -7330449082183940199
+      "ni\xF1o_ducha_8": -3943555156996713871
+      "ni\xF1o_ducha_9": 7448022874136573908
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
