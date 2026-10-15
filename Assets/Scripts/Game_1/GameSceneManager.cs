@@ -10,7 +10,17 @@ public class GameSceneManager : MonoBehaviour
 
     public void LoadLevel1()
     {
-        SceneManager.LoadScene("Game1A_Main");
+        SceneManager.LoadScene("Game_1");
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Game_2");
+    }
+
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("Game_3");
     }
 
     public void ReloadCurrentScene()

@@ -9,7 +9,7 @@ public class StartPopup2 : MonoBehaviour
     [SerializeField] private GameObject characterPanel;
 
     [Header("Game")]
-    [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameManager2 gameManager;
 
     private bool hasOpenedCharacterSelection;
 
