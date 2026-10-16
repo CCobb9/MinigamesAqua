@@ -45,14 +45,12 @@ public class RepairAnimationController : MonoBehaviour
 
     private IEnumerator WaitForRepairAnimation()
     {
-        // Esperar a que el Animator entre en el estado de reparación.
         while (!animator.GetCurrentAnimatorStateInfo(0)
                        .IsName(repairStateName))
         {
             yield return null;
         }
 
-        // Esperar a que termine la animación.
         while (animator.GetCurrentAnimatorStateInfo(0)
                        .IsName(repairStateName) &&
                animator.GetCurrentAnimatorStateInfo(0)
