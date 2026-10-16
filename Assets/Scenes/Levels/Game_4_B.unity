@@ -953,7 +953,7 @@ MonoBehaviour:
   airplaneSpawner: {fileID: 1022452530}
   cloudCollisionReduction: 0.3
   airplaneCollisionReduction: 0.3
-  timeLimit: 5
+  timeLimit: 30
   timerText: {fileID: 273676860}
   cloudAnimator: {fileID: 1806177637}
   winAnimationTrigger: Win
@@ -1727,7 +1727,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 393314434}
         m_TargetAssemblyTypeName: GameSceneManager, Assembly-CSharp
-        m_MethodName: LoadLevel4B
+        m_MethodName: ReloadCurrentScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

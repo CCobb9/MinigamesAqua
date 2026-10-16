@@ -48,6 +48,11 @@ public class GameSceneManager : MonoBehaviour
         SceneManager.LoadScene("Game_4_D");
     }
 
+    public void LoadMainTitle()
+    {
+        SceneManager.LoadScene("MainTitle");
+    }
+
     public void ReloadCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

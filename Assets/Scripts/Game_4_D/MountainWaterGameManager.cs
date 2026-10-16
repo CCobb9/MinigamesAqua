@@ -145,7 +145,7 @@ public class MountainWaterGameManager : MonoBehaviour
 
         if (gameSceneManager != null)
         {
-            gameSceneManager.LoadMenu();
+            gameSceneManager.LoadMainTitle();
         }
     }
 }
