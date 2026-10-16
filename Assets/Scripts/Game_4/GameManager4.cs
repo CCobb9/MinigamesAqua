@@ -1,4 +1,5 @@
 
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -17,6 +18,11 @@ public class GameManager4 : MonoBehaviour
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
 
+    [Header("Win Animation")]
+    [SerializeField] private GameObject sunAnimation;
+    [SerializeField] private GameObject vaporAnimation;
+    [SerializeField] private float winPopupDelay = 3f;
+
     private int remainingClouds;
     private float timeRemaining;
     private bool gameStarted;
@@ -26,6 +32,8 @@ public class GameManager4 : MonoBehaviour
     {
         if (winPanel != null) winPanel.SetActive(false);
         if (losePanel != null) losePanel.SetActive(false);
+        if (sunAnimation != null) sunAnimation.SetActive(false);
+        if (vaporAnimation != null) vaporAnimation.SetActive(false);
     }
 
     private void Update()
@@ -121,10 +129,21 @@ public class GameManager4 : MonoBehaviour
 
     private void WinGame()
     {
-        if (gameEnded)
-            return;
+        if (gameEnded) return;
 
         gameEnded = true;
+        StartCoroutine(ShowWinPopup());
+    }
+
+    private IEnumerator ShowWinPopup()
+    {
+        if (sunAnimation != null)
+            sunAnimation.SetActive(true);
+
+        if (vaporAnimation != null)
+            vaporAnimation.SetActive(true);
+
+        yield return new WaitForSeconds(winPopupDelay);
 
         if (winPanel != null)
             winPanel.SetActive(true);
