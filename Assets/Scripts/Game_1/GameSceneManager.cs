@@ -28,9 +28,24 @@ public class GameSceneManager : MonoBehaviour
         SceneManager.LoadScene("Game_3_B");
     }
 
-    public void LoadLevel4()
+    public void LoadLevel4A()
     {
-        SceneManager.LoadScene("Game_4");
+        SceneManager.LoadScene("Game_4_A");
+    }
+
+    public void LoadLevel4B()
+    {
+        SceneManager.LoadScene("Game_4_B");
+    }
+
+    public void LoadLevel4C()
+    {
+        SceneManager.LoadScene("Game_4_C");
+    }
+
+    public void LoadLevel4D()
+    {
+        SceneManager.LoadScene("Game_4_D");
     }
 
     public void ReloadCurrentScene()

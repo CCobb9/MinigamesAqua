@@ -501,7 +501,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 393314434}
         m_TargetAssemblyTypeName: GameSceneManager, Assembly-CSharp
         m_MethodName: LoadMenu
         m_Mode: 1
@@ -797,6 +797,8 @@ MonoBehaviour:
   cloud: {fileID: 1806177634}
   cloudRect: {fileID: 1806177633}
   airplaneSpawner: {fileID: 1022452530}
+  cloudCollisionReduction: 0.3
+  airplaneCollisionReduction: 0.3
   timeLimit: 30
   timerText: {fileID: 346712616}
   cloudAnimator: {fileID: 0}
@@ -1721,9 +1723,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 393314434}
         m_TargetAssemblyTypeName: GameSceneManager, Assembly-CSharp
-        m_MethodName: LoadLevel4
+        m_MethodName: LoadLevel4B
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1823,8 +1825,9 @@ MonoBehaviour:
   - {fileID: 1283848180}
   minSpawnDelay: 1
   maxSpawnDelay: 2.5
-  airplaneSpeed: 500
-  maxActiveAirplanes: 2
+  airplaneSpeed: 1000
+  minAirplanesPerSpawn: 1
+  maxAirplanesPerSpawn: 2
 --- !u!1 &1235970531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,7 +1911,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 393314434}
         m_TargetAssemblyTypeName: GameSceneManager, Assembly-CSharp
         m_MethodName: LoadMenu
         m_Mode: 1
@@ -2813,9 +2816,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 393314434}
         m_TargetAssemblyTypeName: GameSceneManager, Assembly-CSharp
-        m_MethodName: LoadLevel4
+        m_MethodName: LoadLevel4C
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

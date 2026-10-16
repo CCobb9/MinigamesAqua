@@ -84,7 +84,6 @@ public class GameManager3 : MonoBehaviour
         selectedButton.ShowCorrect();
         selectedButton.SetInteractable(false);
 
-        // Un acierto elimina todos los indicadores de error.
         foreach (SequenceButton sequenceButton in sequenceButtons)
         {
             if (sequenceButton != null)
@@ -102,8 +101,6 @@ public class GameManager3 : MonoBehaviour
         selectedButton.ShowWrong();
         currentErrors++;
 
-        Debug.Log($"Errores: {currentErrors}/{maxErrors}");
-
         if (currentErrors >= maxErrors)
             LoseGame();
     }
@@ -114,8 +111,6 @@ public class GameManager3 : MonoBehaviour
 
         if (winPanel != null)
             winPanel.SetActive(true);
-
-        Debug.Log("¡Secuencia completada!");
     }
 
     private void LoseGame()
@@ -130,7 +125,5 @@ public class GameManager3 : MonoBehaviour
 
         if (losePanel != null)
             losePanel.SetActive(true);
-
-        Debug.Log("Juego perdido: se alcanzó el máximo de errores.");
     }
 }

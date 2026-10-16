@@ -1,3 +1,4 @@
+
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,13 @@ public class CloudSurvivalGameManager : MonoBehaviour
 
     [Header("Airplanes")]
     [SerializeField] private AirplaneSpawner airplaneSpawner;
+
+    [Header("Collision Settings")]
+    [Range(0f, 0.45f)]
+    [SerializeField] private float cloudCollisionReduction = 0.15f;
+
+    [Range(0f, 0.45f)]
+    [SerializeField] private float airplaneCollisionReduction = 0.25f;
 
     [Header("Timer")]
     [SerializeField] private float timeLimit = 30f;
@@ -86,6 +94,11 @@ public class CloudSurvivalGameManager : MonoBehaviour
         if (cloudRect == null || airplaneSpawner == null)
             return false;
 
+        Rect cloudBounds = GetScreenRect(
+            cloudRect,
+            cloudCollisionReduction
+        );
+
         foreach (Airplane airplane in airplaneSpawner.ActiveAirplanes)
         {
             if (airplane == null || !airplane.gameObject.activeInHierarchy)
@@ -97,26 +110,40 @@ public class CloudSurvivalGameManager : MonoBehaviour
             if (airplaneRect == null)
                 continue;
 
-            if (GetScreenRect(cloudRect).Overlaps(GetScreenRect(airplaneRect)))
-            {
+            Rect airplaneBounds = GetScreenRect(
+                airplaneRect,
+                airplaneCollisionReduction
+            );
+
+            if (cloudBounds.Overlaps(airplaneBounds))
                 return true;
-            }
         }
 
         return false;
     }
 
-
-    private Rect GetScreenRect(RectTransform rectTransform)
+    private Rect GetScreenRect(
+        RectTransform rectTransform,
+        float reduction)
     {
         Vector3[] corners = new Vector3[4];
         rectTransform.GetWorldCorners(corners);
 
+        Canvas canvas = rectTransform.GetComponentInParent<Canvas>();
+
+        Camera uiCamera = null;
+
+        if (canvas != null &&
+            canvas.renderMode != RenderMode.ScreenSpaceOverlay)
+        {
+            uiCamera = canvas.worldCamera;
+        }
+
         Vector2 bottomLeft = RectTransformUtility.WorldToScreenPoint(
-            null, corners[0]);
+            uiCamera, corners[0]);
 
         Vector2 topRight = RectTransformUtility.WorldToScreenPoint(
-            null, corners[2]);
+            uiCamera, corners[2]);
 
         Rect rect = Rect.MinMaxRect(
             bottomLeft.x,
@@ -125,8 +152,8 @@ public class CloudSurvivalGameManager : MonoBehaviour
             topRight.y
         );
 
-        float widthReduction = rect.width * 0.15f;
-        float heightReduction = rect.height * 0.15f;
+        float widthReduction = rect.width * reduction;
+        float heightReduction = rect.height * reduction;
 
         rect.xMin += widthReduction;
         rect.xMax -= widthReduction;
@@ -135,7 +162,6 @@ public class CloudSurvivalGameManager : MonoBehaviour
 
         return rect;
     }
-
 
     private void UpdateTimerText()
     {
@@ -151,7 +177,8 @@ public class CloudSurvivalGameManager : MonoBehaviour
 
     private void LoseGame()
     {
-        if (gameEnded) return;
+        if (gameEnded)
+            return;
 
         gameEnded = true;
         gameStarted = false;

@@ -62,8 +62,6 @@ public class RepairAnimationController : MonoBehaviour
         repairCoroutine = null;
         isPlaying = false;
 
-        Debug.Log("Animación de reparación terminada.");
-
         gameManager.CompleteRepairAnimation();
     }
 

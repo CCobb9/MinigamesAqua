@@ -13,10 +13,15 @@ public class AirplaneSpawner : MonoBehaviour
     [SerializeField] private float minSpawnDelay = 1f;
     [SerializeField] private float maxSpawnDelay = 2.5f;
     [SerializeField] private float airplaneSpeed = 500f;
-    [SerializeField] private int maxActiveAirplanes = 2;
+
+    [Header("Simultaneous Spawn")]
+    [SerializeField] private int minAirplanesPerSpawn = 1;
+    [SerializeField] private int maxAirplanesPerSpawn = 2;
 
     private readonly List<Airplane> activeAirplanes = new();
+
     public IReadOnlyList<Airplane> ActiveAirplanes => activeAirplanes;
+
     private float spawnTimer;
     private bool spawning;
 
@@ -29,10 +34,15 @@ public class AirplaneSpawner : MonoBehaviour
 
         spawnTimer -= Time.deltaTime;
 
-        if (spawnTimer <= 0f &&
-            activeAirplanes.Count < maxActiveAirplanes)
+        if (spawnTimer <= 0f)
         {
-            SpawnAirplane();
+            int spawnCount = Random.Range(
+                minAirplanesPerSpawn,
+                maxAirplanesPerSpawn + 1
+            );
+
+            SpawnAirplanes(spawnCount);
+
             spawnTimer = Random.Range(minSpawnDelay, maxSpawnDelay);
         }
     }
@@ -61,7 +71,7 @@ public class AirplaneSpawner : MonoBehaviour
         activeAirplanes.Clear();
     }
 
-    private void SpawnAirplane()
+    private void SpawnAirplanes(int count)
     {
         if (airplanePrefab == null ||
             movementArea == null ||
@@ -80,17 +90,29 @@ public class AirplaneSpawner : MonoBehaviour
         if (validPoints.Count == 0)
             return;
 
-        RectTransform selectedPoint =
-            validPoints[Random.Range(0, validPoints.Count)];
+        for (int i = validPoints.Count - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Range(0, i + 1);
 
-        Airplane airplane = Instantiate(airplanePrefab, movementArea);
+            (validPoints[i], validPoints[randomIndex]) =
+                (validPoints[randomIndex], validPoints[i]);
+        }
 
-        RectTransform airplaneRect =
-            airplane.GetComponent<RectTransform>();
+        int actualCount = Mathf.Min(count, validPoints.Count);
 
-        airplaneRect.position = selectedPoint.position;
+        for (int i = 0; i < actualCount; i++)
+        {
+            RectTransform selectedPoint = validPoints[i];
 
-        airplane.Initialize(movementArea, airplaneSpeed);
-        activeAirplanes.Add(airplane);
+            Airplane airplane = Instantiate(airplanePrefab, movementArea);
+
+            RectTransform airplaneRect =
+                airplane.GetComponent<RectTransform>();
+
+            airplaneRect.position = selectedPoint.position;
+
+            airplane.Initialize(movementArea, airplaneSpeed);
+            activeAirplanes.Add(airplane);
+        }
     }
 }
