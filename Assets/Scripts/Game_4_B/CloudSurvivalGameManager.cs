@@ -215,7 +215,7 @@ public class CloudSurvivalGameManager : MonoBehaviour
         yield return new WaitForSeconds(moveToCenterDuration);
 
         if (cloudAnimator != null)
-            cloudAnimator.SetTrigger(winAnimationTrigger);
+            cloudAnimator.enabled = true;
 
         yield return new WaitForSeconds(winPopupDelay);
 

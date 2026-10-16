@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +17,10 @@ public class MountainWaterGameManager : MonoBehaviour
 
     [Header("Win")]
     [SerializeField] private GameObject winPopup;
+
+    [Header("Scene Manager")]
+    [SerializeField] private GameSceneManager gameSceneManager;
+    [SerializeField] private float menuDelay = 4f;
 
     private int nextRockIndex;
     private bool isAnimating;
@@ -78,7 +81,9 @@ public class MountainWaterGameManager : MonoBehaviour
     {
         isAnimating = true;
 
-        Image path = waterPathFills[index];
+        Image path = index < waterPathFills.Length
+            ? waterPathFills[index]
+            : null;
 
         if (path != null)
         {
@@ -108,13 +113,17 @@ public class MountainWaterGameManager : MonoBehaviour
             yield break;
         }
 
-        rocks[nextRockIndex].SetInteractable(true);
+        if (rocks[nextRockIndex] != null)
+            rocks[nextRockIndex].SetInteractable(true);
 
         isAnimating = false;
     }
 
     private void CompleteGame()
     {
+        if (gameEnded)
+            return;
+
         gameEnded = true;
         isAnimating = false;
 
@@ -126,5 +135,17 @@ public class MountainWaterGameManager : MonoBehaviour
 
         if (winPopup != null)
             winPopup.SetActive(true);
+
+        StartCoroutine(ReturnToMenu());
+    }
+
+    private IEnumerator ReturnToMenu()
+    {
+        yield return new WaitForSeconds(menuDelay);
+
+        if (gameSceneManager != null)
+        {
+            gameSceneManager.LoadMenu();
+        }
     }
 }
