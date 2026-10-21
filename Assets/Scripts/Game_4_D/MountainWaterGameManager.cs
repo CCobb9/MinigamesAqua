@@ -22,6 +22,8 @@ public class MountainWaterGameManager : MonoBehaviour
     [SerializeField] private GameSceneManager gameSceneManager;
     [SerializeField] private float menuDelay = 4f;
 
+    [SerializeField] private AudioClip backgroundMusic;
+
     private int nextRockIndex;
     private bool isAnimating;
     private bool gameStarted;
@@ -51,6 +53,11 @@ public class MountainWaterGameManager : MonoBehaviour
 
             rocks[i].Initialize(this);
             rocks[i].SetInteractable(i == 0);
+        }
+
+        if (AudioManager.Instance != null && backgroundMusic != null)
+        {
+            AudioManager.Instance.PlayMusic(backgroundMusic);
         }
     }
 
@@ -88,6 +95,8 @@ public class MountainWaterGameManager : MonoBehaviour
         if (path != null)
         {
             float elapsed = 0f;
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlaySFX("WaterFlow");
 
             while (elapsed < fillDuration)
             {
@@ -135,6 +144,7 @@ public class MountainWaterGameManager : MonoBehaviour
 
         if (winPopup != null)
             winPopup.SetActive(true);
+        AudioManager.Instance.PlaySFX("WinPanel");
 
         StartCoroutine(ReturnToMenu());
     }

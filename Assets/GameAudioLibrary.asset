@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f951b22d229b24f9a7512f16e6c27f, type: 3}
+  m_Name: GameAudioLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::AudioLibrary
+  sounds:
+  - soundName: ButtonClick
+    clip: {fileID: 8300000, guid: dc58d70091993ba49885a477497eb5af, type: 3}
+    volume: 1
+  - soundName: LosePanel
+    clip: {fileID: 8300000, guid: 1ccd610b7545f104ab2cc38373f6ac00, type: 3}
+    volume: 1
+  - soundName: WinPanel
+    clip: {fileID: 8300000, guid: 74eabe553d6b3d14c9a2bc3d28d462c5, type: 3}
+    volume: 1
+  - soundName: WaterBurst
+    clip: {fileID: 8300000, guid: 6ad0a02f10cd61b4f8266fd103df299e, type: 3}
+    volume: 1
+  - soundName: RepairBurst
+    clip: {fileID: 8300000, guid: eb4bb7f6868286b4d99f2dfdbb1b118f, type: 3}
+    volume: 1
+  - soundName: CorrectOption
+    clip: {fileID: 8300000, guid: dd906f5158373e444b73d8ef63340121, type: 3}
+    volume: 1
+  - soundName: WrongOption
+    clip: {fileID: 8300000, guid: 89e40938c6a27a1468433bfb33d68241, type: 3}
+    volume: 1
+  - soundName: CloudClick
+    clip: {fileID: 8300000, guid: 3e749a4f8b5f90040ace0be8ad672a74, type: 3}
+    volume: 1
+  - soundName: SunShine
+    clip: {fileID: 8300000, guid: b0b24afd173f22a4badbabb3d8a97e77, type: 3}
+    volume: 1
+  - soundName: PlaneAppear
+    clip: {fileID: 8300000, guid: 861993075c18a5f4e96733c26c9c03fb, type: 3}
+    volume: 1
+  - soundName: CloudFinalAnim
+    clip: {fileID: 8300000, guid: 7d0e4cba9fa8bbf4a9bb5addf1367a46, type: 3}
+    volume: 1
+  - soundName: CloudJump
+    clip: {fileID: 8300000, guid: 1725f3ca05ad8ae429f8b9d927977260, type: 3}
+    volume: 1
+  - soundName: RockBreak
+    clip: {fileID: 8300000, guid: 46db3a8a13f670b4a855d6ad8fd6e861, type: 3}
+    volume: 1
+  - soundName: WaterFlow
+    clip: {fileID: 8300000, guid: f998ce4839b5c0141ae0df9d03b083c1, type: 3}
+    volume: 1

@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject winPanel;
 
+    [SerializeField] private AudioClip backgroundMusic;
+
     private WaterClickable currentBrokenClickable;
     private Coroutine nextBreakCoroutine;
 
@@ -28,6 +30,11 @@ public class GameManager : MonoBehaviour
 
         waterBar.Initialize(this);
         InitializeClickables();
+
+        if (AudioManager.Instance != null && backgroundMusic != null)
+        {
+            AudioManager.Instance.PlayMusic(backgroundMusic);
+        }
     }
 
     private void InitializeClickables()
@@ -122,6 +129,7 @@ public class GameManager : MonoBehaviour
         }
 
         losePanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("LosePanel");
     }
 
     private void WinGame()
@@ -140,6 +148,7 @@ public class GameManager : MonoBehaviour
         waterBar.StopProgress();
 
         winPanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("WinPanel");
     }
 
     public void SetGameStarted(bool started)

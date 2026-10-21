@@ -10,6 +10,8 @@ public class CloudFlappyGameManager : MonoBehaviour
     [SerializeField] private GameObject winPopup;
     [SerializeField] private GameObject losePopup;
 
+    [SerializeField] private AudioClip backgroundMusic;
+
     private bool gameStarted;
     private bool gameEnded;
 
@@ -23,6 +25,11 @@ public class CloudFlappyGameManager : MonoBehaviour
 
         if (cloud != null)
             cloud.SetCanMove(false);
+
+        if (AudioManager.Instance != null && backgroundMusic != null)
+        {
+            AudioManager.Instance.PlayMusic(backgroundMusic);
+        }
     }
 
     public void SetGameStarted(bool started)
@@ -68,6 +75,8 @@ public class CloudFlappyGameManager : MonoBehaviour
 
         if (winPopup != null)
             winPopup.SetActive(true);
+
+        AudioManager.Instance.PlaySFX("WinPanel");
     }
 
     private void LoseGame()
@@ -83,5 +92,6 @@ public class CloudFlappyGameManager : MonoBehaviour
 
         if (losePopup != null)
             losePopup.SetActive(true);
+        AudioManager.Instance.PlaySFX("LosePanel");
     }
 }

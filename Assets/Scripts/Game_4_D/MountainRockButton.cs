@@ -30,6 +30,8 @@ public class MountainRockButton : MonoBehaviour
     {
         if (gameManager != null)
             gameManager.TryRemoveRock(this);
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX("RockBreak");
     }
 
     public void Remove()

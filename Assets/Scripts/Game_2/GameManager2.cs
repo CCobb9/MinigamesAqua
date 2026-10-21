@@ -21,6 +21,8 @@ public class GameManager2 : MonoBehaviour
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject winPanel;
 
+    [SerializeField] private AudioClip backgroundMusic;
+
     private readonly List<WaterClickable2> activeLeaks = new();
 
     private WaterClickable2 pendingRepair;
@@ -50,6 +52,11 @@ public class GameManager2 : MonoBehaviour
 
             clickable.Initialize(this);
             clickable.Repair();
+        }
+
+        if (AudioManager.Instance != null && backgroundMusic != null)
+        {
+            AudioManager.Instance.PlayMusic(backgroundMusic);
         }
     }
 
@@ -204,6 +211,7 @@ public class GameManager2 : MonoBehaviour
 
         if (losePanel != null)
             losePanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("LosePanel");
     }
 
     private void WinGame()
@@ -228,6 +236,7 @@ public class GameManager2 : MonoBehaviour
 
         if (winPanel != null)
             winPanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("WinPanel");
     }
 
     private void StopReplenishment()

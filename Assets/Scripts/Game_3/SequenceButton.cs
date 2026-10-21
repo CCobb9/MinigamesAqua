@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class SequenceButton : MonoBehaviour
 {
+    private const string CorrectSound = "CorrectOption";
+    private const string WrongSound = "WrongOption";
+
     [Header("Button")]
     [SerializeField] private Button button;
     [SerializeField] private int orderNumber;
@@ -40,19 +43,32 @@ public class SequenceButton : MonoBehaviour
 
     public void ShowCorrect()
     {
-        correctIndicator.SetActive(true);
-        wrongIndicator.SetActive(false);
+        if (correctIndicator != null)
+            correctIndicator.SetActive(true);
+
+        if (wrongIndicator != null)
+            wrongIndicator.SetActive(false);
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX(CorrectSound);
     }
 
     public void ShowWrong()
     {
-        correctIndicator.SetActive(false);
-        wrongIndicator.SetActive(true);
+        if (correctIndicator != null)
+            correctIndicator.SetActive(false);
+
+        if (wrongIndicator != null)
+            wrongIndicator.SetActive(true);
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX(WrongSound);
     }
 
     public void ClearWrongIndicator()
     {
-        wrongIndicator.SetActive(false);
+        if (wrongIndicator != null)
+            wrongIndicator.SetActive(false);
     }
 
     public void ClearIndicators()

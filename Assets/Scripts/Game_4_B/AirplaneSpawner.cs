@@ -113,6 +113,9 @@ public class AirplaneSpawner : MonoBehaviour
 
             airplane.Initialize(movementArea, airplaneSpeed);
             activeAirplanes.Add(airplane);
+
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlaySFX("PlaneAppear");
         }
     }
 }

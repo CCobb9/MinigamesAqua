@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GameManager4 : MonoBehaviour
 {
+
+    private const string SunShineSound = "SunShine";
+
     [Header("Clouds")]
     [SerializeField] private CloudTarget cloudPrefab;
     [SerializeField] private RectTransform cloudContainer;
@@ -23,6 +26,8 @@ public class GameManager4 : MonoBehaviour
     [SerializeField] private GameObject vaporAnimation;
     [SerializeField] private float winPopupDelay = 3f;
 
+    [SerializeField] private AudioClip backgroundMusic;
+
     private int remainingClouds;
     private float timeRemaining;
     private bool gameStarted;
@@ -34,6 +39,11 @@ public class GameManager4 : MonoBehaviour
         if (losePanel != null) losePanel.SetActive(false);
         if (sunAnimation != null) sunAnimation.SetActive(false);
         if (vaporAnimation != null) vaporAnimation.SetActive(false);
+
+        if (AudioManager.Instance != null && backgroundMusic != null)
+        {
+            AudioManager.Instance.PlayMusic(backgroundMusic);
+        }
     }
 
     private void Update()
@@ -139,6 +149,7 @@ public class GameManager4 : MonoBehaviour
     {
         if (sunAnimation != null)
             sunAnimation.SetActive(true);
+        AudioManager.Instance.PlaySFX(SunShineSound);
 
         if (vaporAnimation != null)
             vaporAnimation.SetActive(true);
@@ -147,6 +158,7 @@ public class GameManager4 : MonoBehaviour
 
         if (winPanel != null)
             winPanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("WinPanel");
     }
 
     private void LoseGame()
@@ -158,5 +170,6 @@ public class GameManager4 : MonoBehaviour
 
         if (losePanel != null)
             losePanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("LosePanel");
     }
 }

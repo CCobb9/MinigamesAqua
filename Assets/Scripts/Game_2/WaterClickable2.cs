@@ -1,8 +1,14 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterClickable2 : MonoBehaviour
 {
+    private const string WaterBurstSound = "WaterBurst";
+    private const string RepairBurstSound = "RepairBurst";
+
+    private static readonly HashSet<WaterClickable2> brokenClickables = new();
+
     [Header("Animation")]
     [SerializeField] private Animator animator;
 
@@ -18,7 +24,6 @@ public class WaterClickable2 : MonoBehaviour
     public void Initialize(GameManager2 manager)
     {
         gameManager = manager;
-
         HideRepairVisual();
     }
 
@@ -36,22 +41,43 @@ public class WaterClickable2 : MonoBehaviour
 
         if (animator != null)
             animator.SetBool("IsBroken", true);
+
+        brokenClickables.Add(this);
+
+        if (brokenClickables.Count == 1 &&
+            AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayLoopSFX(WaterBurstSound);
+        }
     }
 
     public void Repair()
     {
+        if (!isBroken)
+            return;
+
         isBroken = false;
 
         if (animator != null)
             animator.SetBool("IsBroken", false);
 
         HideRepairVisual();
+        brokenClickables.Remove(this);
+
+        if (brokenClickables.Count == 0 &&
+            AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopLoopSFX(WaterBurstSound);
+        }
     }
 
     public void ShowRepairVisual(bool isMale)
     {
-        boyRepairVisual.SetActive(isMale);
-        girlRepairVisual.SetActive(!isMale);
+        if (boyRepairVisual != null)
+            boyRepairVisual.SetActive(isMale);
+
+        if (girlRepairVisual != null)
+            girlRepairVisual.SetActive(!isMale);
     }
 
     public void HideRepairVisual()
@@ -69,5 +95,20 @@ public class WaterClickable2 : MonoBehaviour
             return;
 
         gameManager.TryRepair(this);
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX(RepairBurstSound);
+    }
+
+    private void OnDestroy()
+    {
+        if (!brokenClickables.Remove(this))
+            return;
+
+        if (brokenClickables.Count == 0 &&
+            AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopLoopSFX(WaterBurstSound);
+        }
     }
 }

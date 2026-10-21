@@ -1161,6 +1161,7 @@ GameObject:
   - component: {fileID: 559754265}
   - component: {fileID: 559754264}
   - component: {fileID: 559754263}
+  - component: {fileID: 559754266}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1282,6 +1283,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559754261}
   m_CullTransparentMesh: 1
+--- !u!114 &559754266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559754261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0d852d9d16fef47bb1899fb06fa273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
+  soundName: ButtonClick
 --- !u!1 &585548937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,6 +3277,7 @@ GameObject:
   - component: {fileID: 1566170036}
   - component: {fileID: 1566170035}
   - component: {fileID: 1566170034}
+  - component: {fileID: 1566170037}
   m_Layer: 5
   m_Name: FemaleSelection
   m_TagString: Untagged
@@ -3384,6 +3399,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566170032}
   m_CullTransparentMesh: 1
+--- !u!114 &1566170037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566170032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0d852d9d16fef47bb1899fb06fa273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
+  soundName: ButtonClick
 --- !u!1001 &1603177079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3829,6 +3857,7 @@ GameObject:
   - component: {fileID: 1724657013}
   - component: {fileID: 1724657012}
   - component: {fileID: 1724657011}
+  - component: {fileID: 1724657014}
   m_Layer: 5
   m_Name: Next Game
   m_TagString: Untagged
@@ -3950,6 +3979,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724657009}
   m_CullTransparentMesh: 1
+--- !u!114 &1724657014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724657009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0d852d9d16fef47bb1899fb06fa273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
+  soundName: ButtonClick
 --- !u!1 &1757784554
 GameObject:
   m_ObjectHideFlags: 0
@@ -4414,6 +4456,7 @@ GameObject:
   - component: {fileID: 1941800168}
   - component: {fileID: 1941800167}
   - component: {fileID: 1941800166}
+  - component: {fileID: 1941800169}
   m_Layer: 5
   m_Name: Try Again
   m_TagString: Untagged
@@ -4535,6 +4578,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941800164}
   m_CullTransparentMesh: 1
+--- !u!114 &1941800169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941800164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0d852d9d16fef47bb1899fb06fa273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
+  soundName: ButtonClick
 --- !u!1 &1955503359
 GameObject:
   m_ObjectHideFlags: 0
@@ -4595,6 +4651,7 @@ MonoBehaviour:
   repairAnimation: {fileID: 1712246478}
   losePanel: {fileID: 291426550}
   winPanel: {fileID: 851360821}
+  backgroundMusic: {fileID: 8300000, guid: 62fea6d567959f04a97514a88c198702, type: 3}
 --- !u!1 &1958290364
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,6 +4664,7 @@ GameObject:
   - component: {fileID: 1958290368}
   - component: {fileID: 1958290367}
   - component: {fileID: 1958290366}
+  - component: {fileID: 1958290369}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -4728,6 +4786,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958290364}
   m_CullTransparentMesh: 1
+--- !u!114 &1958290369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958290364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0d852d9d16fef47bb1899fb06fa273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
+  soundName: ButtonClick
 --- !u!1 &1973277489 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2367113391168018217, guid: 874ee45b8682e6e4e814ac5496e1bc13, type: 3}

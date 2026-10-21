@@ -2345,6 +2345,7 @@ MonoBehaviour:
   winPopup: {fileID: 680697622}
   gameSceneManager: {fileID: 393314434}
   menuDelay: 4
+  backgroundMusic: {fileID: 8300000, guid: 3ce34433e4cd7c24e910576b6132800b, type: 3}
 --- !u!1001 &1817104129
 PrefabInstance:
   m_ObjectHideFlags: 0

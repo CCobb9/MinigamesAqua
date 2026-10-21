@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager3 : MonoBehaviour
@@ -9,14 +10,20 @@ public class GameManager3 : MonoBehaviour
     [SerializeField] private Transform layout;
 
     [Header("Game Settings")]
-    [SerializeField] private int maxErrors = 3;
+    [SerializeField] private int maxErrors = 2;
 
     [Header("UI")]
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
 
+    [Header("Attempts UI")]
+    [SerializeField] private TMP_Text attemptsText;
+
+    [SerializeField] private AudioClip backgroundMusic;
+
     private int nextExpectedOrder = 1;
     private int currentErrors;
+    private bool gameStarted;
     private bool gameEnded;
 
     private void Start()
@@ -29,6 +36,29 @@ public class GameManager3 : MonoBehaviour
 
         InitializeButtons();
         ShuffleButtons();
+
+        currentErrors = 0;
+        UpdateAttemptsText();
+
+        if (AudioManager.Instance != null && backgroundMusic != null)
+        {
+            AudioManager.Instance.PlayMusic(backgroundMusic);
+        }
+    }
+
+    public void SetGameStarted(bool started)
+    {
+        gameStarted = started;
+    }
+
+    private void UpdateAttemptsText()
+    {
+        if (attemptsText == null)
+            return;
+
+        int remainingAttempts = Mathf.Max(0, maxErrors - currentErrors);
+
+        attemptsText.text = remainingAttempts.ToString();
     }
 
     private void InitializeButtons()
@@ -66,7 +96,7 @@ public class GameManager3 : MonoBehaviour
 
     public void SelectButton(SequenceButton selectedButton)
     {
-        if (gameEnded || selectedButton == null)
+        if (!gameStarted || gameEnded || selectedButton == null)
             return;
 
         if (selectedButton.OrderNumber == nextExpectedOrder)
@@ -101,6 +131,8 @@ public class GameManager3 : MonoBehaviour
         selectedButton.ShowWrong();
         currentErrors++;
 
+        UpdateAttemptsText();
+
         if (currentErrors >= maxErrors)
             LoseGame();
     }
@@ -111,6 +143,7 @@ public class GameManager3 : MonoBehaviour
 
         if (winPanel != null)
             winPanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("WinPanel");
     }
 
     private void LoseGame()
@@ -125,5 +158,6 @@ public class GameManager3 : MonoBehaviour
 
         if (losePanel != null)
             losePanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("LosePanel");
     }
 }

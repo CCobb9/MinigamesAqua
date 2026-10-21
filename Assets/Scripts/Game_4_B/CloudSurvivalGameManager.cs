@@ -33,6 +33,8 @@ public class CloudSurvivalGameManager : MonoBehaviour
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
 
+    [SerializeField] private AudioClip backgroundMusic;
+
     private float timeRemaining;
     private bool gameStarted;
     private bool gameEnded;
@@ -50,6 +52,11 @@ public class CloudSurvivalGameManager : MonoBehaviour
 
         timeRemaining = timeLimit;
         UpdateTimerText();
+
+        if (AudioManager.Instance != null && backgroundMusic != null)
+        {
+            AudioManager.Instance.PlayMusic(backgroundMusic);
+        }
     }
 
     private void Update()
@@ -191,6 +198,7 @@ public class CloudSurvivalGameManager : MonoBehaviour
 
         if (losePanel != null)
             losePanel.SetActive(true);
+        AudioManager.Instance.PlaySFX("LosePanel");
     }
 
     private void WinGame()
@@ -205,6 +213,8 @@ public class CloudSurvivalGameManager : MonoBehaviour
             airplaneSpawner.ClearAirplanes();
 
         StartCoroutine(ShowWinSequence());
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlaySFX("PlaneAppear");
     }
 
     private IEnumerator ShowWinSequence()
@@ -221,5 +231,7 @@ public class CloudSurvivalGameManager : MonoBehaviour
 
         if (winPanel != null)
             winPanel.SetActive(true);
+
+        AudioManager.Instance.PlaySFX("WinPanel");
     }
 }
