@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 1999460605}
   backgroundMusic: {fileID: 0}
-  musicVolume: 0.5
+  musicVolume: 0.25
   sfxSource: {fileID: 1999460604}
   sfxVolume: 1
   loopSfxSource: {fileID: 1999460606}

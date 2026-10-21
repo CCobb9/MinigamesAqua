@@ -4647,7 +4647,7 @@ MonoBehaviour:
   waterBar: {fileID: 1050391968}
   repairBar: {fileID: 585548940}
   maxActiveLeaks: 2
-  timeBetweenBreaks: 3
+  timeBetweenBreaks: 1.5
   repairAnimation: {fileID: 1712246478}
   losePanel: {fileID: 291426550}
   winPanel: {fileID: 851360821}
